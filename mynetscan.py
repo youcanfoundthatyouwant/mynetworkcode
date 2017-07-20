@@ -77,7 +77,8 @@ try:
 	    for tt in threads:
 	        tt.setDaemon(True)
 	        tt.start()
-	    tt.join()
+            for tt in threads:
+		tt.join()
 	    time.sleep(2)
 	    print '---------------------------------------------------------------------------'
 	    for i in listnet2:
@@ -127,7 +128,8 @@ try:
 	    for tt in threads:
 	        tt.setDaemon(True)
 	        tt.start()
-	    tt.join()
+	    for tt in threads:
+		tt.join()
 	    time.sleep(2)
 	    print '---------------------------------------------------------------------------'
 	    for i in listnet2:
